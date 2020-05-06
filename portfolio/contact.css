@@ -1,0 +1,246 @@
+html, body {
+	margin: 0;
+}
+
+html {
+	background:#008684;
+}
+body{ 
+  font-family: 'Kadwa', serif; 
+}
+.contact-me {
+	font: 100% 'Kadwa', serif; 
+	background:#FF8374;
+	width: 75%;
+	margin: 0 auto;
+	padding: 2%;
+  line-height: 1.6;
+  border-color: #77A0B8;
+  margin-bottom: 20px;
+}
+article, aside, section, nav, figure, header, footer {
+	display: block;
+}
+article{ 
+  padding-top: 15px;
+}
+h3, h4 {
+	font-weight: normal;
+  font-family: 'Kadwa', serif; 
+	color: #008684;
+	margin: 0;
+	line-height: 1;
+}
+
+h3 {
+	font-size: 1.8em;
+	text-transform: uppercase;
+}
+h4 {
+	font: 1.2em 'Kadwa', serif; 
+	color: black;
+}
+p
+ {
+   color: black;
+	margin: 0 0 1em;
+}
+a {
+	color: #77A0B8;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+code {
+	color: red;
+}
+
+ /*********************** HEADERS ***********************/
+ header { 
+  background-color: #008684;
+ 
+} 
+h1 { 
+  font-size: 100px;
+  line-height: 1; 
+} 
+/* Added a text effect to the h1 header*/
+h1.printers {
+font-family: 'Domine', serif;
+font-weight: 600;
+background-color:#008684;	
+color: #EFF0F1;
+text-shadow:
+0 1px 0px #7A9D9D,
+1px 0 0px #94BFBF,
+1px 2px 1px #7A9D9D,
+2px 1px 1px #94BFBF,
+2px 3px 2px #7A9D9D,
+3px 2px 2px #94BFBF,
+3px 4px 2px #7A9D9D,
+4px 3px 3px #94BFBF,
+4px 5px 3px #7A9D9D,
+5px 4px 2px #94BFBF,
+5px 6px 2px #7A9D9D,
+6px 5px 2px #94BFBF,
+6px 7px 1px #7A9D9D,
+7px 6px 1px #94BFBF,
+7px 8px 0px #7A9D9D,
+8px 7px 0px #94BFBF; 
+}
+h2 { 
+  font-size: 45px;
+}
+h1,h2 { /* changed the font family to 'Domine', serif;*/
+  font-family: 'Domine', serif;
+  font-weight: 400;
+  margin: 0;
+}
+.content-wrap { 
+  max-width: 800px;
+  width: 85%;
+  margin: 0 auto;
+  padding: 30px 0;
+} 
+
+h3 { 
+margin-bottom: 0;
+}
+/*********************** NAVIGATION ***********************/
+/*. masthead{ 
+  background-color: aqua;
+}*/
+input#mobile_menu{ 
+  display: none;
+}
+input#mobile_menu:checked + nav { 
+   left: 0;
+}
+input#mobile_menu:checked + nav label { 
+background-image: url(images/menu_close.svg);
+}
+nav {
+width: 180px;
+background-color: rgb(68, 155, 158);
+padding:10px 20px 10px 25px;
+color: #fff;
+box-sizing: border-box;
+position: absolute;
+top: 0px;
+left: -180px;
+transition: left .6s ease-in-out;
+}
+nav a{ 
+color: #fff;
+text-decoration: none;
+display: block;
+margin: 0;
+padding: 14px 0;
+border-top: 1px solid rgba(255,255,255,.1);
+}
+nav a:first-of-type{ 
+  border-top: none;
+}
+nav label{ 
+  cursor: pointer;
+  display: block;
+  width: 42px;
+  height: 42px;
+  background: #008684 url(images/menu_open.svg) no-repeat center center;
+  background-size: 20px auto;
+  position: absolute;
+  top: 78px;
+  right: -42px;
+}
+nav a:hover { 
+  background-color: #EFF0F1;
+}
+/*****************  CONTACT INFO / SOCIAL MEDIA  *****************/
+.content-footer{ 
+  max-width: 800px;
+  width: 85%;
+  margin: 0 auto;
+  padding: 5px 0;
+}
+
+footer { 
+
+    background-color: #FEA088; 
+    color:#EFF0F1; 
+    
+}
+.contact-list{ 
+  display: flex;
+justify-content: center;
+}
+
+ /***************** RESPONSIVE *****************/
+ @media screen and (min-width: 750px) { 
+  header, footer{ 
+    text-align: center;
+  } 
+  
+  footer { 
+      font-family: 'Domine', serif;
+      clear: both; 
+  }
+  .contact-list { 
+    list-style-type: none;
+    padding: 0;
+    
+  }
+  .contact-list a { 
+    padding: 15px;
+    display: inline-block;
+  }
+
+} 
+
+@media screen and (max-width: 749px) {
+h1 { 
+  font-size: 75px;
+  line-height: 0.9;
+  margin-bottom: 20px;
+}
+ h2 { 
+  line-height: 1;
+ }
+ .contact-list a {
+   padding: 5px;
+ }
+}
+@media screen and( min-width: 600px) {
+  header, footer{
+    text-align: center; 
+    
+} 
+footer { 
+  font-family: 'Domine', serif;
+  clear: both; 
+}
+.contact-list { 
+list-style-type: none;
+padding: 0;
+
+}
+.contact-list a { 
+padding: 15px;
+display: inline-block;
+}
+}
+@media screen and (max-width: 599px) {
+  h1 { 
+    font-size: 55px;
+    line-height: 0.9;
+    margin-bottom: 20px;
+  }
+   h2 { 
+    line-height: 1;
+   }
+   .contact-list a {
+     padding: 30; 
+    
+
+   }
+  }
