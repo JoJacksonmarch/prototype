@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact from</title>
+    <link href="https://fonts.googleapis.com/css?family=Kadwa|Oswald:400,600&display=swap" rel="stylesheet">
+    <link href="contact.css" type="text/css" rel="stylesheet">
+    
+    <style>
+      .register-form{ 
+        line-height: 1.4;
+        margin-right: -2em;
+      }
+      .form-group{ 
+        background:whitesmoke;
+        margin-bottom: 1em;
+        padding: 10px;
+        margin-right: 2em;
+      }
+      .form-group ul {
+        list-style: none;
+        margin: 0 0 2em;
+        padding: 0;
+      }
+      .form-group li {
+        margin-bottom: 0.5em;
+      }
+      .form-group h3 {
+        margin-bottom: 1em;
+      }
+      .form-fields input[type="text"],
+      .form-fields input[type="tel"],
+      .form-fields input[type="email"],
+      .form-fields select {
+        box-sizing: border-box;
+        padding: 0.6em 0.8em;
+        color: #999;
+        background: #f7f7f7;
+        border: 1px solid #4c7e7b;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 0.9em;
+        text-decoration: none;
+        line-height: normal;
+        max-height: 3em;
+      }
+      .form-fields input[type="text"]:focus,
+      .form-fields input[type="tel"]:focus,
+      .form-fields input[type="email"]:focus,
+      .form-food textarea:focus,
+      .form-fields select:focus {
+        color: #333;
+        border: 1px solid #C17CCF;
+        outline: none;
+        background: #f2f2f2;
+      }
+      .form-message textarea{ 
+      display: block;
+      box-sizing: border-box;
+      font: 0.9em;
+      width: 90%;
+      height: 6em;
+      overflow: auto;
+      padding: 0.6em 0.8em;
+      color: #999;
+      background:#f7f7f7;
+      border: 1px solid #008684 ;
+      line-height: normal;
+      }
+      .register-btn {
+        border-radius: 0px 2px 2px 0px;
+        box-sizing: content-box;
+        background: #008684 ;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: white;
+        padding: 0.35em 0.75em;
+        border: none;
+        font-size: 1.1em;
+        text-decoration: none;
+        cursor: pointer;	
+      }
+      .register-btn:hover, .register-btn:focus {
+        background:  #FEA088;
+      }
+      /*flex it*/
+     .register-form{ 
+       display: flex;
+       flex-wrap: wrap;
+     }
+     .form-group{ 
+       flex: 1 0 300px;
+     }
+      .form-submit{ 
+        flex: 0 0 100%;
+      }
+      .form-fields li{ 
+       display: flex;
+       flex-wrap: wrap;
+      }
+      .form-fields input[type="text"],
+      .form-fields input[type="tel"],
+      .form-fields input[type="email"],
+      .form-fields select{
+        flex: 1 0 230px;
+      }
+      .form-fields label{ 
+        flex: 1 0 90px;
+        max-width: 200px;
+      }
+      /*.form-subject, .form-interest{ 
+        display: flex;
+       flex-wrap: wrap;
+       justify-content: space-between;
+      }
+      .form-subject li{ 
+        width: 145px;
+      }
+      .form-interest li{ 
+        flex: 1 0 200px;
+      }*/
+
+      </style>
+</head>
+<body>  
+  <header class="page-title">
+  <code class="identifier"></code>
+  <div class= "content-wrap">
+  <h1 class= "printers">Contact me</h1>
+</div>
+
+  <input id="mobile_menu"type="checkbox">
+  <nav>
+      <label for="mobile_menu"></label>
+      <div>
+          <a href="prototype.html">Home</a>
+          <a href="about.html">About Me</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="blogs.html">Blogs</a>
+          <a href="contact.html">Contact Me</a>
+      </div>
+  </nav> 
+  </header>
+  
+  <article class="contact-me">
+    <form class="register-form">
+    <section class="form-group">
+    <h3>Personal Info</h3>
+    <ul class="form-fields">
+      <li><label for="name">Firstname:</label> <input type="text" name="name" id="name" placeholder="your firstname" class="text-input"></li> 
+      <li><label for="name">Lastname:</label><input type="text" name="name" id="name" placeholder="your lastname" class="text-input"></li> 
+      <li><label for="phone">Phone number:</label> <input type="tel" name="phone" id="phone" placeholder="#" class="text-input"></li>
+      <li><label for="email-address">Email address:</label> <input type="email" name="email" id="email-address" placeholder="email" class="text-input"></li>
+    </ul>
+    
+    <h3>About you</h3>
+    <p>Tell me about your self and your interest</p>
+    <ul class="form-fields">
+      <h4>Area of study:</h4>
+
+      <ul class="form-subject">
+        <li><input type="checkbox" id="forms-ws" value="forms"> <label for="forms-ws">Graphic design</label></li>
+        <li><input type="checkbox" id="jekyll-ws" value="jekyll"> <label for="jekyll-ws">Computer design</label></li>
+        <li><input type="checkbox" id="usability-ws" value="usability"> <label for="usability-ws">Web Design</label></li>
+        <li><input type="checkbox" id="node-ws" value="node"> <label for="node-ws">Game art design</label></li>
+      </ul> 
+  </section> 
+  <section class="form-group">
+        <h4>Subject</h4>
+        <ul class="form-interest">
+      <li><label for="description">Area of interest:</label> <select class="select-menu" id="description" name="description">
+        <option value="computer">Computer design</option>
+        <option value="Graphic">Graphic design</option>
+        <option value="typography">Typography</option> 
+        <option value="other">Web design</option> <option value="other">Other</option>
+        </select></li>
+    </ul>
+    <h4>Message</h4>
+    <p>leave any comments or questions here and I'll be sure to respond.</p>
+    <ul class="form-message">
+      <li><label for="food-options">Please list any dietary restrictions:</label><textarea id="food-options" name="food-options" class="text-area">comments</textarea> </li>
+    </ul>
+  </section>
+ 
+  <section class="form-submit">
+    <h4>All finished?</h4>
+    <p>We're looking forward to seeing you!</p>
+    <button type="submit" class="register-btn">submit</button>
+  </section>
+    </form>
+    </article>
+    <footer class="footer-content">
+      <code class="identifier"></code>
+      <div class= "content-footer">
+      <h2>Let's Keep in Touch!</h2>
+      <ul class="contact-list">
+        <li><a href="mailto:email@example.com"><img src="images/iconfinder_GMAIL_1217177.png"alt="email"></a><li>
+        <li><a href="https://www.behance.net/jordynjackson" target="_blank"><img src="images/iconfinder_BEHANCE_1217158.png"alt="behance"></a></li>
+        <li><a href="https://twitter.com/" target="_blank"><img src="images/iconfinder_twitter_circle_gray_107135.png"alt="twitter"></a></li>
+        <li><a href="https://www.linkedin.com/jobs?trk=li_sem_namer_careers_jobsgtm_3Q_Careers_ToFu_Google_Search_Desktop_LinkedIn_Alpha_Brand_US_NAMER_Affinity_English_network=g_campaign=1938534848_keyword=linkedin&src=go-pa&veh=&mcid=&cname=3Q_Careers_ToFu_Google_Search_Desktop_LinkedIn_Alpha_Brand_US_NAMER_Affinity_English&camid=1938534848&asid=70386015283&keyword=linkedin&targetid=kwd-148086543&crname=&crid=351511950189&placement=&dev=c&gclid=EAIaIQobChMIlOHo-b2p5wIVgZ-zCh0DnwhbEAAYASAAEgLY0PD_BwE" target="_blank"><img src="images/iconfinder_linkedin_circle_gray_107149.png"alt="linkedin"></a></li>
+      </ul> 
+    </div>
+  </footer>
+  </body>
+</html> 

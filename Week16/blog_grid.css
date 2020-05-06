@@ -1,0 +1,24 @@
+@supports(grid-area: auto){ /* Test if grid supported*/
+    .site{ /**/
+        display: grid;/* Sets direct child tags to grid layout*/
+        grid-template-columns: 2fr minmax(20em, 30em) 1fr;/* fr is a fraction of the page. Minmax sets the minum and maximum sizes for an area */
+        grid-template-rows: auto repeat(2, 1fr);/* Creates three rows. Repet creats multiple areas with the same properties. First number indicates the number of times it should be repeated.*/
+        grid-gap: 0.8em;/* The space between grid areas */
+       }
+      /*.masthead{ 
+           grid-column: 1/5; 2/4 indicates the area should start a trid line 2 and end at grid line 4
+           grid-row: 2/3;
+       }*/
+       .page-title{ 
+        grid-column: 1/6;
+        grid-row: 1/2;  
+       }
+       .projects { 
+           grid-column:1/6 ; /* 2/span 2 indicates that the grid should start at line 2 and span across 2 grid areas */
+           grid-row: 2/3;
+       }
+       .footer-content{ 
+          grid-column: 1/6;
+          grid-row: 3;/*ALthough there is no row in 4, in the properties we can place content after the last grid line, creating a fourth row */
+       }
+    }

@@ -1,0 +1,258 @@
+html { 
+  box-sizing: border-box;
+  }
+  *, *:before, *:after { 
+  box-sizing: inherit;
+  }
+  .site { 
+    color: #343434;
+    margin: 0;
+    padding: 0; 
+    font-family: 'Kadwa', serif; 
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  img { 
+    float: left;
+    margin-right: 20px; 
+  } 
+  a { 
+      color: #EFF0F1;
+  } 
+  a:hover { 
+      text-decoration: none;
+  } 
+  
+  .item-details h3 + p { 
+      font-style: italic;
+  }
+  .item-details h3 ~ p { 
+    margin:0;
+  }
+  .divider > section { 
+    border-bottom: 1px dashed #008684;
+    padding: 25px 0
+  }
+  .divider > section:last-of-type {
+    border-bottom: none;
+  }
+  /*********************** HEADERS ***********************/
+  header { 
+    background-color: #4c7e7b;
+  } 
+  h1 { 
+    font-size: 100px;
+    line-height: 1; 
+  } 
+  /* Added a text effect to the h1 header*/
+  h1.printers {
+  font-family: 'Domine', serif;
+  font-weight: 600;
+  background-color:#4c7e7b;	
+  color: #EFF0F1;
+  text-shadow:
+  0 1px 0px #7A9D9D,
+  1px 0 0px #94BFBF,
+  1px 2px 1px #7A9D9D,
+  2px 1px 1px #94BFBF,
+  2px 3px 2px #7A9D9D,
+  3px 2px 2px #94BFBF,
+  3px 4px 2px #7A9D9D,
+  4px 3px 3px #94BFBF,
+  4px 5px 3px #7A9D9D,
+  5px 4px 2px #94BFBF,
+  5px 6px 2px #7A9D9D,
+  6px 5px 2px #94BFBF,
+  6px 7px 1px #7A9D9D,
+  7px 6px 1px #94BFBF,
+  7px 8px 0px #7A9D9D,
+  8px 7px 0px #94BFBF; 
+  }
+  h2 { 
+    font-size: 45px;
+  }
+  h1,h2 { /* changed the font family to 'Domine', serif;*/
+    font-family: 'Domine', serif;
+    font-weight: 400;
+    margin: 0;
+  }
+  .content-wrap { 
+    max-width: 800px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 30px 0;
+  } 
+  
+  h3 { 
+  margin-bottom: 0;
+  }
+  /*********************** NAVIGATION ***********************/
+  /*. masthead{ 
+    background-color: aqua;
+  }*/
+  input#mobile_menu{ 
+    display: none;
+  }
+  input#mobile_menu:checked + nav { 
+     left: 0;
+  }
+  input#mobile_menu:checked + nav label { 
+  background-image: url(images/menu_close.svg);
+ }
+  nav {
+  width: 180px;
+  background-color: rgb(68, 155, 158);
+  padding:10px 20px 10px 25px;
+  color: #fff;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0px;
+  left: -180px;
+  transition: left .6s ease-in-out;
+  }
+  nav a{ 
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin: 0;
+  padding: 14px 0;
+  border-top: 1px solid rgba(255,255,255,.1);
+  }
+  nav a:first-of-type{ 
+    border-top: none;
+  }
+  nav label{ 
+    cursor: pointer;
+    display: block;
+    width: 42px;
+    height: 42px;
+    background: #4c7e7b url(images/menu_open.svg) no-repeat center center;
+    background-size: 22px auto;
+    position: absolute;
+    top: 78px;
+    right: -42px;
+  }
+  nav a:hover { 
+    background-color: #EFF0F1;
+  }
+  
+  /***********************  ABOUT / PROFILE  ***********************/
+  .main-content { 
+      background-color: #008684;
+      color: whitesmoke ;
+      
+  }
+  .main-content h1{ 
+   /* added header h1 to give it space from h2 in the header*/ 
+   overflow: hidden; 
+   padding: 25px 0;
+   /* added a float in the h1 header */
+   float: center;
+  }
+  
+  /********************  PROJECTS / PORTFOLIO  *********************/
+  .projects { 
+      background-color:#FF6F61; 
+      /*Added btn to projects and changed the blog link */ 
+      color: whitesmoke ;  /* chaneged the color of the font to Whitesmoke*/
+  }
+  
+  
+  /***********************  WORK EXPERIENCE  ***********************/
+  .work-experience { 
+    background-color: #85CED1;
+    color:whitesmoke;
+    
+  } 
+  
+  /*****************  CONTACT INFO / SOCIAL MEDIA  *****************/
+  .content-footer{ 
+    max-width: 800px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 20px 0;
+  } 
+  footer { 
+      font-family: 'Domine', serif;
+      background-color: #FEA088; 
+      color:#EFF0F1; 
+      
+  }
+  .contact-list { 
+    list-style-type: none;
+    padding: 0;
+    
+  }
+  .contact-list a { 
+    padding: 15px;
+    display: inline-block;
+  }
+  /***************** RESPONSIVE *****************/
+  @media screen and (min-width: 750px) { 
+    header, footer{ 
+      text-align: center;
+    } 
+    
+    .job-item { 
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      column-gap: 20px;
+    }
+    .contact-list{ 
+      display: flex;
+    justify-content: center;
+    }
+  } 
+  
+  @media screen and (max-width: 749px) {
+  h1 { 
+    font-size: 75px;
+    line-height: 0.9;
+    margin-bottom: 20px;
+  }
+   h2 { 
+    line-height: 1;
+   }
+   .contact-list a {
+     padding: 5px;
+
+   }
+  }
+  /**/
+  @media screen and( min-width: 600px) {
+    header, footer{
+      text-align: right; 
+      
+  } 
+  .project-item img { 
+    /* added a float to the image*/
+    float: left;
+    margin-right: 15px;
+    
+  }
+  .job-item { 
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+  }
+  .contact-list{ 
+      display: flex;
+    justify-content: center;
+    }
+   
+  }
+  @media screen and (max-width: 599px) {
+    h1 { 
+      font-size: 55px;
+      line-height: 0.9;
+      margin-bottom: 20px;
+    }
+     h2 { 
+      line-height: 1;
+     }
+     .contact-list a {
+       padding: 30; 
+      
+  
+     }
+    }
